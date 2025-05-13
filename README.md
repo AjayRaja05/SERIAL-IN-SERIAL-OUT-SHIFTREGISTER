@@ -37,14 +37,37 @@ For different input combinations generate the timing diagram
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+```
+module EXP10 (
+    input clk,
+    input sin,
+    output reg [3:0] q
+);
 
-Developed by: RegisterNumber:
+always @(posedge clk) begin
+    q[0] <= sin;
+    q[1] <= q[0];
+    q[2] <= q[1];
+    q[3] <= q[2];
+end
+
+endmodule
+```
+
+Developed by: RegisterNumber: 212224240006
 
 */
 
 **RTL LOGIC FOR SISO Shift Register**
 
+![image](https://github.com/user-attachments/assets/710fd0fc-d353-405f-88b6-f14e66685ed3)
+
+
 **TIMING DIGRAMS FOR SISO Shift Register**
 
+![image](https://github.com/user-attachments/assets/cb734393-d16f-461c-8004-ffd9c37af6ad)
+
+
 **RESULTS**
+
+Thus SISO Shift Register is implemented using verilog and their functionality using their functional tables is validated.
